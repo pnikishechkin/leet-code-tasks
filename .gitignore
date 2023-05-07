@@ -6,7 +6,6 @@ out/
 target/
 
 *.iws
-*.iml
 *.ipr
 
 ### Eclipse ###
