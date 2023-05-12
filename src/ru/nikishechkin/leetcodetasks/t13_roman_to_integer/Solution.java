@@ -1,8 +1,6 @@
-import javax.sound.midi.Soundbank;
-import java.io.BufferedReader;
-import java.nio.file.Files;
+package ru.nikishechkin.leetcodetasks.t13_roman_to_integer;
 
-public class RomanToInteger13 {
+public class Solution {
     public static void main(String[] args) {
         System.out.println(romanToInt_v2("III"));
         System.out.println(romanToInt_v2("IV"));

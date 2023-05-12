@@ -1,7 +1,8 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
+package ru.nikishechkin.leetcodetasks.t234_palindrome_linked_list;
 
-public class PalindromeLinkedList234 {
+import java.util.ArrayList;
+
+public class Solution {
 
     public static void main(String[] args) {
         ListNode ln1 = new ListNode();
