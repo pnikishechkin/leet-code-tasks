@@ -1,15 +1,15 @@
 package ru.nikishechkin.leetcodetasks.t704_binary_search;
 
-/*
-704. Binary Search
-Given an array of integers nums which is sorted in ascending order, and an integer target, write a function
-to search target in nums. If target exists, then return its index. Otherwise, return -1.
-You must write an algorithm with O(log n) runtime complexity.
-
-704. Бинарный поиск
-Дан массив целых чисел nums, отсортированных в порядке возрастания, и целое число target, напишите функцию для
-поиска target в nums. Если target существует, верните его индекс. В противном случае возвращайтесь -1.
-Вы должны написать алгоритм со O(log n)сложностью выполнения.
+/**
+ * 704. Binary Search
+ * Given an array of integers nums which is sorted in ascending order, and an integer target, write a function
+ * to search target in nums. If target exists, then return its index. Otherwise, return -1.
+ * You must write an algorithm with O(log n) runtime complexity.
+ *
+ * 704. Бинарный поиск
+ * Дан массив целых чисел nums, отсортированных в порядке возрастания, и целое число target, напишите функцию для
+ * поиска target в nums. Если target существует, верните его индекс. В противном случае возвращайтесь -1.
+ * Вы должны написать алгоритм со O(log n)сложностью выполнения.
  */
 class Solution {
 

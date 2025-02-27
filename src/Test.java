@@ -1,10 +1,6 @@
-
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.nio.file.Path;
 import java.util.Scanner;
-
 
 public class Test {
 
@@ -16,9 +12,6 @@ public class Test {
             path = path.toAbsolutePath();
         }
         System.out.println(path);
-
-
     }
-
 }
 
