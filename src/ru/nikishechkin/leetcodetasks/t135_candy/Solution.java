@@ -22,14 +22,14 @@ public class Solution {
 
     public static void main(String[] args) {
         int[] rat = {1, 0, 2}; // 5
-        int[] rat2 = {1,2,87,87,87,2,1};
-        // 0 1 1 0 0 -1 -2
-        // 1 2 3 1 3  2  1
-        // 1 2 3 1 3  2  1 - 13
+        int[] rat2 = {1,2,87,87,87,2,1}; // 1 2 3 1 3 2 1 -13
+        int[] rat3 = {1,3,2,2,1}; // 1 2 1 2 1 - 7
+        int[] rat4 = {1,3,4,5,2}; // 1 2 3 4 1 - 11
+
         // если следующий больше, то забыли про левую часть
         // если следующий меньше, то смотрим еще дальше в массив, пока не встретим равный или больший и набираем
         // либо иначе сразу по числам
-        System.out.println(candy(rat2));
+        System.out.println(candy(rat4));
     }
 
     public static int candy(int[] ratings) {
@@ -40,19 +40,27 @@ public class Solution {
         // 1 2 2
         // 1 2 1 - 5
 
-        //  Если рядом находится элемент больше, то брать на 1 больше, чем у него
-        // сначала у всех 1
 
         int[] candies = new int[ratings.length];
+        int j = 0, temp = 1;
 
         for (int i = 0; i < ratings.length - 1; i++) {
             if (ratings[i + 1] > ratings[i]) {
-                candies[i + 1] = candies[i + 1] + 1;
+                candies[i + 1] = candies[i] + 1;
             }
             if (ratings[i] > ratings[i + 1]) {
-                candies[i + 1] = candies[i] - 1;
+                j = i;
+                temp = 0;
+                while (j < ratings.length - 1 && ratings[j] > ratings[j + 1])  {
+                    temp++;
+                    j++;
+                }
+                candies[i] += temp - (candies[i] - candies[i + 1]);
+                System.out.println("temp = " + temp);
             }
+            candies[i] += 1;
         }
+        candies[ratings.length - 1] += 1;
 
         System.out.println(Arrays.toString(candies));
         return Arrays.stream(candies).sum();
